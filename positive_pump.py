@@ -33,7 +33,8 @@ def main():
                 except (ValueError, TypeError, UnboundLocalError): st.write('Please Check your dataset(s)')
 
     else: 
-        a = st.number_input('Insert rod diameter (mm)', key = 'rod_diameter') 
+        d_r = st.number_input('Insert rod diameter (mm)', key = 'rod_diameter') 
+        a = np.pi*np.power(d_r,2)*0.25
         try:
                     A = np.pi*np.power(d,2)*0.25
                     Q = (2*A-a)*rpm*num*st_len*0.00000006  
