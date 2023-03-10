@@ -29,7 +29,7 @@ def main():
                     Q = A*rpm*num*st_len*0.00000006    
                     slip=7.204*np.exp(0.0002*vis)
                     Q_corrected = Q*(1-slip*0.01)
-                    st.success('Your pump capacity is {} m3/hr / ({} L/hr)'.format(round(Q_corrected,2),round(Q_corrected*1000,2)))
+                    st.success('Your pump capacity is {} m3/hr / ({} L/hr)'.format(round(Q_corrected,3),round(Q_corrected*1000,2)))
                 except (ValueError, TypeError, UnboundLocalError): st.write('Please Check your dataset(s)')
 
     else: 
@@ -40,7 +40,7 @@ def main():
                     Q = (2*A-a)*rpm*num*st_len*0.00000006  
                     slip=7.204*np.exp(0.0002*vis)
                     Q_corrected = Q*(1-slip*0.01)
-                    st.success('Your pump capacity is {} m3/hr / ({} L/hr)'.format(round(Q_corrected,2),round(Q_corrected*1000,2)))
+                    st.success('Your pump capacity is {} m3/hr / ({} L/hr)'.format(round(Q_corrected,3),round(Q_corrected*1000,2)))
         except (ValueError, TypeError, UnboundLocalError): st.write('Please Check your dataset(s)')
 
 
